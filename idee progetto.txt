@@ -1,0 +1,84 @@
+DOMANDE DA FARE 
+- CSR si intende SR nell'operazione RCSR?
+
+4 registri R0-R3 da 8 bit ---> 4 DFF
+3 registri di stato (SR, IR, PC) ---> 3 DFF
+--------------------------
+7 DFF per fare i registri
+
+ROM: set di istruzioni (non modificabili, da leggere solo in sequenza)
+
+Le istruzioni vengono interpretate con la seguente codifica
+RCSR : 00000000
+IN:    00000001
+OUT:   00000010
+MOV:   00000011
+ADD:   00000100
+MUL:   00000101
+LSL:   00000110
+LSR:   00000111
+------------------
+sarà il contenuto del registro IR(instruction register)    
+
+Program counter (4 bit) va in input alla ROM e specifica una delle 16 righe della ROM
+La ROM in output restituisce 8 bit che rappresentano la codifica dell'istruzione da eseguire
+
+PSEUDOCODICE istruzioni
+
+RCSR Rx, CSR
+- legge il contenuto di CSR (salvarlo in un registro di appoggio?)
+- scrive il contenuto in Rx
+
+IN Rx
+- in input abbiamo il contenuto da leggere
+- scrivo il contenuto in Rx
+
+OUT Rx
+- leggere Rx
+- scriverlo in output
+
+MOV Ry, Rx
+- leggere Rx (salvare in registro di appoggio)
+- scrivere in Ry
+
+ADD Ry, Rx 
+- leggere Rx (salvataggio?)
+- sommare a Ry
+// COMPONENTE RIPPLE CARRY ADDER
+
+MUL Ry, Rx 
+- leggere Rx (salvataggio?)
+- moltiplicare a Ry
+// COMPONENTE MOLTIPLICATORE (da implementare)
+
+LSL Rx
+- leggere Rx (salvare?)
+- fare shift left
+
+LSR Rx
+- leggere Rx (salvare?)
+- fare shift right
+
+
+FUNZIONAMENTO CPU
+- all'avvio PC = 00000000
+- legge operazione alla riga 0 dalla ROM
+- ROM restituisce instr che viene scritto in IR
+- fare il case della IR e vedere quale operazione eseguire
+- eseguire blocco di istruzioni specifico per quella operazione (serve la JUMP?)
+- incrementare PC e darlo in input alla ROM
+- repeat
+
+------------------------
+NUOVO FORMATO ISTRUZIONI
+uguale a prima ma con:
+- primi due bit identificano il registro Rx
+- terzo e quarto bit identificano il registro Ry
+RCSR : xx000000
+IN:    xx000001
+OUT:   xx000010
+MOV:   xxyy0011
+ADD:   xxyy0100
+MUL:   xxyy0101
+LSL:   xx000110
+LSR:   xx000111
