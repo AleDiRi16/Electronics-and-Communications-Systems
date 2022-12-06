@@ -1,8 +1,8 @@
 errore con la N nel case
 decidere registro appoggio
-implementazione istruzioni (ADD, MUL, LSL, LSR)
+flag registri di stato 
 implementare ROM
-implementare moltiplicatore
+implementare moltiplicatore -- fare overflow
 testbench
 fare macchina a stati, altre cose di documentazione
 sintesi VIVADO e fare analisi

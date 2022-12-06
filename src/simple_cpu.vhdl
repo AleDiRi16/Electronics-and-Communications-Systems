@@ -46,7 +46,20 @@ architecture struct of simple_cpu is
         );
       end component;
     -- component moltiplicatore
-
+    component multiplier is
+        generic(
+            Nbit : positive := 8
+        );
+        port (
+            clk : in std_logic;
+            reset   : in std_logic;
+            en  : in std_logic;
+            ow  : out std_logic;
+            x : in std_logic_vector(Nbit - 1 downto 0);
+            y : in std_logic_vector(Nbit - 1 downto 0);
+            result : out std_logic_vector(Nbit - 1 downto 0);
+        );
+    end component;
 
     -- segnali per i registri interni
     signal R0_in : std_logic_vector(N-1 downto 0);
@@ -71,6 +84,10 @@ architecture struct of simple_cpu is
     signal SOMMATORE_a : std_logic_vector(N-1 downto 0);
     signal SOMMATORE_b : std_logic_vector(N-1 downto 0);
     signal SOMMATORE_s : std_logic_vector(N-1 downto 0);
+
+    signal MOLTIPLICATORE_x : std_logic_vector(N-1 downto 0);
+    signal MOLTIPLICATORE_y : std_logic_vector(N-1 downto 0);
+    signal MOLTIPLICATORE_result : std_logic_vector(N-1 downto 0);
 
 begin
 
@@ -196,6 +213,20 @@ begin
           s    => SOMMATORE_s,
           cout => open
         );
+
+    MOLTIPLICATORE: ripple_carry_adder 
+    generic map(
+        Nbit => N
+    )
+    port map(
+        clk => clk,
+        reset   => rst,
+        en  => '1', -- ?????????????????
+        ow  => open, -- ??????????????? SR(2)
+        x => MOLTIPLICATORE_x,
+        y => MOLTIPLICATORE_y,
+        result => MOLTIPLICATORE_result
+    );
 
     simple_cpu_process: process(clk, rst)
         variable Nbit : natural := N;
@@ -550,16 +581,44 @@ begin
                             case(instr(5 downto 4)) is
                                 -- Ry0
                                 when "00" =>
-        
+                                    MOLTIPLICATORE_x <= R0_out;
+                                    MOLTIPLICATORE_y <= R0_out;
+                                    --- wait clock
+                                    if(rising_edge(clk)) then
+                                        null;
+                                    end if;
+
+                                    R0_in <= MOLTIPLICATORE_result;
                                 -- Ry1
                                 when "01" =>
-        
+                                    MOLTIPLICATORE_x <= R0_out;
+                                    MOLTIPLICATORE_y <= R1_out;
+                                    --- wait clock
+                                    if(rising_edge(clk)) then
+                                        null;
+                                    end if;
+
+                                    R1_in <= MOLTIPLICATORE_result;
                                 -- Ry2
                                 when "10" =>
-        
+                                    MOLTIPLICATORE_x <= R0_out;
+                                    MOLTIPLICATORE_y <= R2_out;
+                                    --- wait clock
+                                    if(rising_edge(clk)) then
+                                        null;
+                                    end if;
+
+                                    R2_in <= MOLTIPLICATORE_result;
                                 -- Ry3
                                 when "11" =>
-        
+                                    MOLTIPLICATORE_x <= R0_out;
+                                    MOLTIPLICATORE_y <= R3_out;
+                                    --- wait clock
+                                    if(rising_edge(clk)) then
+                                        null;
+                                    end if;
+
+                                    R3_in <= MOLTIPLICATORE_result;
                                 when others => null;
                             end case;
                         -- Rx1
@@ -567,16 +626,44 @@ begin
                             case(instr(5 downto 4)) is
                                 -- Ry0
                                 when "00" =>
-        
+                                    MOLTIPLICATORE_x <= R1_out;
+                                    MOLTIPLICATORE_y <= R0_out;
+                                    --- wait clock
+                                    if(rising_edge(clk)) then
+                                        null;
+                                    end if;
+
+                                    R0_in <= MOLTIPLICATORE_result;
                                 -- Ry1
                                 when "01" =>
-        
+                                    MOLTIPLICATORE_x <= R1_out;
+                                    MOLTIPLICATORE_y <= R1_out;
+                                    --- wait clock
+                                    if(rising_edge(clk)) then
+                                        null;
+                                    end if;
+
+                                    R1_in <= MOLTIPLICATORE_result;
                                 -- Ry2
                                 when "10" =>
-        
+                                    MOLTIPLICATORE_x <= R1_out;
+                                    MOLTIPLICATORE_y <= R2_out;
+                                    --- wait clock
+                                    if(rising_edge(clk)) then
+                                        null;
+                                    end if;
+
+                                    R2_in <= MOLTIPLICATORE_result;
                                 -- Ry3
                                 when "11" =>
-        
+                                    MOLTIPLICATORE_x <= R1_out;
+                                    MOLTIPLICATORE_y <= R3_out;
+                                    --- wait clock
+                                    if(rising_edge(clk)) then
+                                        null;
+                                    end if;
+
+                                    R3_in <= MOLTIPLICATORE_result;
                                 when others => null;
                             end case;
                         -- Rx2
@@ -584,16 +671,44 @@ begin
                             case(instr(5 downto 4)) is
                                 -- Ry0
                                 when "00" =>
-        
+                                    MOLTIPLICATORE_x <= R2_out;
+                                    MOLTIPLICATORE_y <= R0_out;
+                                    --- wait clock
+                                    if(rising_edge(clk)) then
+                                        null;
+                                    end if;
+
+                                    R0_in <= MOLTIPLICATORE_result;
                                 -- Ry1
                                 when "01" =>
-        
+                                    MOLTIPLICATORE_x <= R2_out;
+                                    MOLTIPLICATORE_y <= R1_out;
+                                    --- wait clock
+                                    if(rising_edge(clk)) then
+                                        null;
+                                    end if;
+
+                                    R1_in <= MOLTIPLICATORE_result;
                                 -- Ry2
                                 when "10" =>
-        
+                                    MOLTIPLICATORE_x <= R2_out;
+                                    MOLTIPLICATORE_y <= R2_out;
+                                    --- wait clock
+                                    if(rising_edge(clk)) then
+                                        null;
+                                    end if;
+
+                                    R2_in <= MOLTIPLICATORE_result;
                                 -- Ry3
                                 when "11" =>
-        
+                                    MOLTIPLICATORE_x <= R2_out;
+                                    MOLTIPLICATORE_y <= R3_out;
+                                    --- wait clock
+                                    if(rising_edge(clk)) then
+                                        null;
+                                    end if;
+
+                                    R3_in <= MOLTIPLICATORE_result;
                                 when others => null;
                             end case;
                         -- Rx3
@@ -601,16 +716,44 @@ begin
                             case(instr(5 downto 4)) is
                                 -- Ry0
                                 when "00" =>
-        
+                                    MOLTIPLICATORE_x <= R3_out;
+                                    MOLTIPLICATORE_y <= R0_out;
+                                    --- wait clock
+                                    if(rising_edge(clk)) then
+                                        null;
+                                    end if;
+
+                                    R0_in <= MOLTIPLICATORE_result;
                                 -- Ry1
                                 when "01" =>
-        
+                                    MOLTIPLICATORE_x <= R3_out;
+                                    MOLTIPLICATORE_y <= R1_out;
+                                    --- wait clock
+                                    if(rising_edge(clk)) then
+                                        null;
+                                    end if;
+
+                                    R1_in <= MOLTIPLICATORE_result;
                                 -- Ry2
                                 when "10" =>
-        
+                                    MOLTIPLICATORE_x <= R3_out;
+                                    MOLTIPLICATORE_y <= R2_out;
+                                    --- wait clock
+                                    if(rising_edge(clk)) then
+                                        null;
+                                    end if;
+
+                                    R2_in <= MOLTIPLICATORE_result;
                                 -- Ry3
                                 when "11" =>
-        
+                                    MOLTIPLICATORE_x <= R3_out;
+                                    MOLTIPLICATORE_y <= R3_out;
+                                    --- wait clock
+                                    if(rising_edge(clk)) then
+                                        null;
+                                    end if;
+
+                                    R3_in <= MOLTIPLICATORE_result;
                                 when others => null;
                             end case;
                         when others => null;

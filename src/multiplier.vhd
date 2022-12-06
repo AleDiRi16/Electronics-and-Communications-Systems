@@ -12,7 +12,7 @@ entity multiplier is
         ow  : out std_logic;
         x : in std_logic_vector(Nbit - 1 downto 0);
         y : in std_logic_vector(Nbit - 1 downto 0);
-        bout : out std_logic_vector(Nbit - 1 downto 0);
+        result : out std_logic_vector(Nbit - 1 downto 0);
     );
 end entity;
 
