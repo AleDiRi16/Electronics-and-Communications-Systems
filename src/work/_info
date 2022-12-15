@@ -1,0 +1,368 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Giovanni/Downloads/Electronics-and-Communications-Systems
+Ecounter
+Z0 w1670254131
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 336
+Z3 dC:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src
+Z4 8C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/counter.vhd
+Z5 FC:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/counter.vhd
+l0
+L4 1
+VOg6^on?dDML2;=VB[E]LV1
+!s100 MPLODzgbnj1Z4mBKTd7@K1
+Z6 OV;C;2020.1;71
+32
+Z7 !s110 1671142936
+!i10b 1
+Z8 !s108 1671142936.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/counter.vhd|
+Z10 !s107 C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/counter.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Abeh
+R1
+R2
+DEx4 work 7 counter 0 22 Og6^on?dDML2;=VB[E]LV1
+!i122 336
+l47
+L17 58
+V;LnS4M8l7BnMO@N[Z:Mgc1
+!s100 2hM;I:_:TGzU`K113Iezh3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edff_n
+R0
+R1
+R2
+!i122 337
+R3
+Z13 8C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/DFF_N.vhd
+Z14 FC:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/DFF_N.vhd
+l0
+L4 1
+VSYKjV5E]FAM0jTHC?ZH:D2
+!s100 nWVXe]R:>GWV=X_IkE`h51
+R6
+32
+R7
+!i10b 1
+R8
+Z15 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/DFF_N.vhd|
+Z16 !s107 C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/DFF_N.vhd|
+!i113 1
+R11
+R12
+Astruct
+R1
+R2
+DEx4 work 5 dff_n 0 22 SYKjV5E]FAM0jTHC?ZH:D2
+!i122 337
+l18
+L17 15
+VYZ^inolj8<3U4T5]H2;cm0
+!s100 AAT1:JcLQUan^>X6m79c^3
+R6
+32
+R7
+!i10b 1
+R8
+R15
+R16
+!i113 1
+R11
+R12
+Efull_adder
+R0
+R1
+R2
+!i122 338
+R3
+Z17 8C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/full_adder.vhd
+Z18 FC:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/full_adder.vhd
+l0
+L4 1
+V6E`C_L8PY9BEToE4AEinX2
+!s100 ]6aSe`f5Y6US@n:?L_zXD2
+R6
+32
+R7
+!i10b 1
+R8
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/full_adder.vhd|
+Z20 !s107 C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/full_adder.vhd|
+!i113 1
+R11
+R12
+Abeh
+R1
+R2
+DEx4 work 10 full_adder 0 22 6E`C_L8PY9BEToE4AEinX2
+!i122 338
+l15
+L14 25
+VH@1Mj;6BzFI2QU1iGcLmG0
+!s100 oIWM9GTKQmXkQT8oB=eob0
+R6
+32
+R7
+!i10b 1
+R8
+R19
+R20
+!i113 1
+R11
+R12
+Ehalf_adder
+R0
+R1
+R2
+!i122 339
+R3
+Z21 8C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/half_adder.vhd
+Z22 FC:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/half_adder.vhd
+l0
+L4 1
+VG4=RdXW?NKng5k]e5S9Y83
+!s100 KB^dm:71@?8YiWR4==:O10
+R6
+32
+R7
+!i10b 1
+R8
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/half_adder.vhd|
+Z24 !s107 C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/half_adder.vhd|
+!i113 1
+R11
+R12
+Aha
+R1
+R2
+DEx4 work 10 half_adder 0 22 G4=RdXW?NKng5k]e5S9Y83
+!i122 339
+l14
+L13 16
+VJ68UgTY>H9F^lg<L3=C`f2
+!s100 Xhgz>Qn5ZD]M5`:UfmOzz2
+R6
+32
+R7
+!i10b 1
+R8
+R23
+R24
+!i113 1
+R11
+R12
+Emulti_abdul
+w1671015173
+Z25 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R1
+R2
+!i122 4
+R3
+8C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/multi_ABDUL.vhd
+FC:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/multi_ABDUL.vhd
+l0
+L5 1
+VMFUIR_:N_[IP_F7J7QVQ;1
+!s100 EMGPVFKSCQM[e8_cfMZZU1
+R6
+32
+!s110 1671136386
+!i10b 1
+!s108 1671136386.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/multi_ABDUL.vhd|
+!s107 C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/multi_ABDUL.vhd|
+!i113 1
+R11
+R12
+Eripple_carry_adder
+R0
+R1
+R2
+!i122 340
+R3
+Z26 8C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/ripple_carry_adder.vhd
+Z27 FC:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/ripple_carry_adder.vhd
+l0
+L4 1
+V1J<eGQc>8@S1OnD^T=O]91
+!s100 ZIM<CD?^g77`Y=I6X0Xmf0
+R6
+32
+Z28 !s110 1671142937
+!i10b 1
+R8
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/ripple_carry_adder.vhd|
+Z30 !s107 C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/ripple_carry_adder.vhd|
+!i113 1
+R11
+R12
+Abeh
+R1
+R2
+DEx4 work 18 ripple_carry_adder 0 22 1J<eGQc>8@S1OnD^T=O]91
+!i122 340
+l18
+L17 16
+Vo6egViWlki[G6TDL;W_cA0
+!s100 UoPSfO?XzzW37h[3>F[oU3
+R6
+32
+R28
+!i10b 1
+R8
+R29
+R30
+!i113 1
+R11
+R12
+Erom
+Z31 w1671142611
+Z32 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R1
+R2
+!i122 341
+R3
+Z33 8C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/rom.vhdl
+Z34 FC:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/rom.vhdl
+l0
+L6 1
+VGi8LRA@Ek22AB]c^SWAW<3
+!s100 h1^c;d3IS@_]5^ez]0]`J1
+R6
+32
+R28
+!i10b 1
+Z35 !s108 1671142937.000000
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/rom.vhdl|
+Z37 !s107 C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/rom.vhdl|
+!i113 1
+R11
+R12
+Astruct
+R32
+R1
+R2
+DEx4 work 3 rom 0 22 Gi8LRA@Ek22AB]c^SWAW<3
+!i122 341
+l37
+L17 24
+VmXMAI6Agh<TO@2eojB`ZX2
+!s100 dMPIA<3afJ8UKDIIcDj3V1
+R6
+32
+R28
+!i10b 1
+R35
+R36
+R37
+!i113 1
+R11
+R12
+Esimple_cpu
+Z38 w1671142930
+R25
+R1
+R2
+!i122 342
+R3
+Z39 8C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/simple_cpu.vhdl
+Z40 FC:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/simple_cpu.vhdl
+l0
+L6 1
+VDTYJa?XSChoIVofi4Kn;M3
+!s100 ]P?E]AIMHCb>FI91P<fP63
+R6
+32
+R28
+!i10b 1
+R35
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/simple_cpu.vhdl|
+Z42 !s107 C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/simple_cpu.vhdl|
+!i113 1
+R11
+R12
+Astruct
+R25
+R1
+R2
+DEx4 work 10 simple_cpu 0 22 DTYJa?XSChoIVofi4Kn;M3
+!i122 286
+l97
+L21 826
+VAVL`leJUSbA`mZfT:79fT3
+!s100 cjo2?LFg3d`BU5ci;1FPU3
+R6
+32
+!s110 1671141865
+!i10b 1
+!s108 1671141865.000000
+R41
+R42
+!i113 1
+R11
+R12
+Esimple_cpu_tb
+Z43 w1671137222
+R25
+R1
+R2
+!i122 343
+R3
+Z44 8C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/tb/simple_cpu_tb.vhdl
+Z45 FC:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/tb/simple_cpu_tb.vhdl
+l0
+L5 1
+Veae`SN2Y?R]M`0]>K;[OK2
+!s100 nc[fQ@6H2C5Fe<19Y5I;m1
+R6
+32
+R28
+!i10b 1
+R35
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/tb/simple_cpu_tb.vhdl|
+Z47 !s107 C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/tb/simple_cpu_tb.vhdl|
+!i113 1
+R11
+R12
+Abeh
+R25
+R1
+R2
+Z48 DEx4 work 13 simple_cpu_tb 0 22 eae`SN2Y?R]M`0]>K;[OK2
+!i122 343
+l36
+Z49 L8 76
+Z50 VYmZDg2e5oKPFTHBa6>92^3
+Z51 !s100 3HkZe_R_@?UjX_mlPWSZ[1
+R6
+32
+R28
+!i10b 1
+R35
+R46
+R47
+!i113 1
+R11
+R12

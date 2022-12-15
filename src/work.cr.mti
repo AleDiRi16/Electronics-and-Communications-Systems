@@ -1,0 +1,70 @@
+C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/rom.vhdl {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/rom.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity rom
+-- Compiling architecture struct of rom
+
+} {} {}} C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/half_adder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/half_adder.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity half_adder
+-- Compiling architecture ha of half_adder
+
+} {} {}} C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/full_adder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/full_adder.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity full_adder
+-- Compiling architecture beh of full_adder
+
+} {} {}} C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/ripple_carry_adder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/ripple_carry_adder.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ripple_carry_adder
+-- Compiling architecture beh of ripple_carry_adder
+
+} {} {}} C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/tb/simple_cpu_tb.vhdl {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/tb/simple_cpu_tb.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity simple_cpu_tb
+-- Compiling architecture beh of simple_cpu_tb
+
+} {} {}} C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/counter.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/counter.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity counter
+-- Compiling architecture beh of counter
+
+} {} {}} C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/simple_cpu.vhdl {0 {vcom -work work -2002 -explicit -stats=none C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/simple_cpu.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity simple_cpu
+-- Compiling architecture struct of simple_cpu
+** Error: C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/simple_cpu.vhdl(842): Cannot drive signal 'instr' of mode IN.
+** Note: C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/simple_cpu.vhdl(847): VHDL Compiler exiting
+
+} {9.0 10.0} {}} C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/DFF_N.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/DFF_N.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity DFF_N
+-- Compiling architecture struct of DFF_N
+
+} {} {}}

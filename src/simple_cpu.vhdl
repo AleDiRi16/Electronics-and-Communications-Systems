@@ -33,6 +33,17 @@ architecture struct of simple_cpu is
         );
       end component;
     -- component ROM
+    component rom is
+        generic(
+            N : natural := 8;
+            M : natural := 4
+        );
+        port(
+            pc : in std_logic_vector(M-1 downto 0);
+            instr_rom : out std_logic_vector(N-1 downto 0)
+        );
+    end component;
+
     component ripple_carry_adder is
         generic (
           Nbit : positive := 8
@@ -46,20 +57,12 @@ architecture struct of simple_cpu is
         );
       end component;
     -- component moltiplicatore
-    component multiplier is
-        generic(
-            Nbit : positive := 8
-        );
-        port (
-            clk : in std_logic;
-            reset   : in std_logic;
-            en  : in std_logic;
-            ow  : out std_logic;
-            x : in std_logic_vector(Nbit - 1 downto 0);
-            y : in std_logic_vector(Nbit - 1 downto 0);
-            result : out std_logic_vector(Nbit - 1 downto 0);
-        );
-    end component;
+    --component multi_internet is
+      --  generic (N: integer);
+        --port ( a    :  in  std_logic_vector(N-1 downto 0);
+          --     b    :  in  std_logic_vector(N-1 downto 0);
+            --   prod :  out std_logic_vector(N-1 downto 0) );
+    --end component;
 
     -- segnali per i registri interni
     signal R0_in : std_logic_vector(N-1 downto 0);
@@ -74,8 +77,10 @@ architecture struct of simple_cpu is
     signal SR_out : std_logic_vector(N-1 downto 0);
     signal IR_in : std_logic_vector(N-1 downto 0);
     signal IR_out : std_logic_vector(N-1 downto 0);
-    signal PC_in : std_logic_vector(N-1 downto 0);
-    signal PC_out : std_logic_vector(N-1 downto 0);
+    signal PC_in : std_logic_vector(M-1 downto 0);
+    signal PC_out : std_logic_vector(M-1 downto 0);
+    signal INSTR_in : std_logic_vector(N-1 downto 0);
+    signal INSTR_out : std_logic_vector(N-1 downto 0);
     signal REG_IN_in : std_logic_vector(N-1 downto 0);
     signal REG_IN_out : std_logic_vector(N-1 downto 0);
     signal REG_OUT_in : std_logic_vector(N-1 downto 0);
@@ -167,7 +172,7 @@ begin
     -- PC1 with 1 for distinguish it to pc
     PC1: DFF_N
     generic map(
-        N => N
+        N => M
     )
     port map(
         clk   => clk,
@@ -177,6 +182,18 @@ begin
         q     => PC_out
     );
     -- istanziare le altre componenti
+
+    INSTR_REG: DFF_N
+    generic map(
+        N => N
+    )
+    port map(
+        clk   => clk,
+        arstn => rst,
+        en    => '1', -- ???????????????????
+        d     => INSTR_in,
+        q     => INSTR_out
+    );
 
     REG_IN: DFF_N
         generic map(
@@ -202,6 +219,16 @@ begin
             q     => REG_OUT_out
         );
 
+    ROM_comp: rom
+    generic map(
+        N => N,
+        M => M
+    )
+    port map(
+        pc => PC_out,
+        instr_rom => INSTR_IN
+    );
+
     SOMMATORE: ripple_carry_adder 
         generic map(
           Nbit => N
@@ -214,25 +241,29 @@ begin
           cout => open
         );
 
-    MOLTIPLICATORE: ripple_carry_adder 
-    generic map(
-        Nbit => N
-    )
-    port map(
-        clk => clk,
-        reset   => rst,
-        en  => '1', -- ?????????????????
-        ow  => open, -- ??????????????? SR(2)
-        x => MOLTIPLICATORE_x,
-        y => MOLTIPLICATORE_y,
-        result => MOLTIPLICATORE_result
-    );
+    --MOLTIPLICATORE: multi_internet 
+    --generic map(
+      --  N => N
+    --)
+    --port map(
+        --clk => clk,
+        --reset   => rst,
+        --en  => '1', -- ?????????????????
+        --ow  => open, -- ??????????????? SR(2)
+        --x => unsigned(MOLTIPLICATORE_x),
+        --y => unsigned(MOLTIPLICATORE_y),
+        --bout => MOLTIPLICATORE_result
+        --a => MOLTIPLICATORE_x,
+        --b => MOLTIPLICATORE_y,
+        --prod => MOLTIPLICATORE_result
+    --);
 
     simple_cpu_process: process(clk, rst)
         variable Nbit : natural := N;
     begin
         if rst = '0' then
             pc <= (others => '0');
+            output <= (others => '0'); -- è il modo giusto ???????
             R0_in <= (others => '0');
             R1_in <= (others => '0');
             R2_in <= (others => '0');
@@ -240,6 +271,9 @@ begin
             SR_in <= (others => '0');
             IR_in <= (others => '0');
             PC_in <= (others => '0');
+            REG_IN_in <= (others => '0');
+            REG_OUT_in <= (others => '0');
+            SR_in(0) <= '1';
         elsif rising_edge(clk) then
             case(instr(2 downto 0)) is
                 -- RCSR
@@ -389,7 +423,7 @@ begin
                                 -- Ry0
                                 when "00" =>
                                     -- !!!!!!!!!!!!!!!!! controllare e copiare e incollare
-                                    SR_in(2) <= R0_out(N-1) & R0_out(N-1);
+                                    SR_in(2) <= R0_out(N-1) and R0_out(N-1);
 
                                     SOMMATORE_a <= R0_out;
                                     SOMMATORE_b <= R0_out;
@@ -802,7 +836,12 @@ begin
                     end case;
                 when others => null;
             end case;
+            PC_in <= std_logic_vector(unsigned(PC_in) + 1);
+            pc <= PC_out;
+            output <= REG_OUT_out;
+            instr <= INSTR_OUT;
         end if;
     end process;
 
+    
 end architecture;

@@ -1,0 +1,910 @@
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of multi_ABDUL.vhd failed with 3 errors.
+# Compile of multi_internet.vhd failed with 3 errors.
+# Compile of multiplier.vhd failed with 1 errors.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl failed with 2 errors.
+# Compile of simple_cpu_tb.vhdl failed with 7 errors.
+# 11 compiles, 5 failed with 16 errors.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl failed with 2 errors.
+# Compile of simple_cpu_tb.vhdl failed with 7 errors.
+# 8 compiles, 2 failed with 9 errors.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl failed with 3 errors.
+# Compile of simple_cpu_tb.vhdl failed with 7 errors.
+# 8 compiles, 2 failed with 10 errors.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl failed with 7 errors.
+# 8 compiles, 1 failed with 7 errors.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl failed with 6 errors.
+# 8 compiles, 1 failed with 6 errors.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl failed with 5 errors.
+# 8 compiles, 1 failed with 5 errors.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 0 failed with no errors.
+vsim -gui work.simple_cpu_tb
+# vsim -gui work.simple_cpu_tb 
+# Start time: 21:41:17 on Dec 15,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.simple_cpu_tb(beh)
+# Loading work.simple_cpu(struct)
+# ** Fatal: (vsim-3348) Port length (4) does not match actual length (8) for port "/simple_cpu_tb/DUT/pc".
+#    Time: 0 ps  Iteration: 0  Instance: /simple_cpu_tb/DUT File: C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/simple_cpu.vhdl Line: 15
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 21:41:18 on Dec 15,2022, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 16
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 0 failed with no errors.
+vsim -gui work.simple_cpu_tb
+# vsim -gui work.simple_cpu_tb 
+# Start time: 21:41:53 on Dec 15,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.simple_cpu_tb(beh)
+# Loading work.simple_cpu(struct)
+# Loading work.dff_n(struct)
+# Loading work.ripple_carry_adder(beh)
+# ** Warning: (vsim-8683) Uninitialized out port /simple_cpu_tb/DUT/pc(3 downto 0) has no driver.
+# This port will contribute value (UUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /simple_cpu_tb/DUT/output(7 downto 0) has no driver.
+# This port will contribute value (UUUUUUUU) to the signal network.
+add wave -position insertpoint  \
+sim:/simple_cpu_tb/clk \
+sim:/simple_cpu_tb/rst_ext \
+sim:/simple_cpu_tb/instr_ext \
+sim:/simple_cpu_tb/pc_ext \
+sim:/simple_cpu_tb/input_ext \
+sim:/simple_cpu_tb/output_ext \
+sim:/simple_cpu_tb/testing
+run -all
+vsim -gui work.simple_cpu_tb
+# End time: 21:44:20 on Dec 15,2022, Elapsed time: 0:02:27
+# Errors: 0, Warnings: 4
+# vsim -gui work.simple_cpu_tb 
+# Start time: 21:44:20 on Dec 15,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.simple_cpu_tb(beh)
+# Loading work.simple_cpu(struct)
+# Loading work.dff_n(struct)
+# Loading work.ripple_carry_adder(beh)
+# ** Warning: (vsim-8683) Uninitialized out port /simple_cpu_tb/DUT/pc(3 downto 0) has no driver.
+# This port will contribute value (UUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /simple_cpu_tb/DUT/output(7 downto 0) has no driver.
+# This port will contribute value (UUUUUUUU) to the signal network.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl failed with 4 errors.
+# 8 compiles, 1 failed with 4 errors.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl failed with 4 errors.
+# 8 compiles, 1 failed with 4 errors.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl failed with 2 errors.
+# 8 compiles, 1 failed with 2 errors.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 0 failed with no errors.
+vsim -gui work.simple_cpu_tb
+# End time: 21:45:45 on Dec 15,2022, Elapsed time: 0:01:25
+# Errors: 0, Warnings: 7
+# vsim -gui work.simple_cpu_tb 
+# Start time: 21:45:45 on Dec 15,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.simple_cpu_tb(beh)
+# Loading work.simple_cpu(struct)
+# Loading work.dff_n(struct)
+# Loading work.ripple_carry_adder(beh)
+# ** Warning: (vsim-8683) Uninitialized out port /simple_cpu_tb/DUT/pc(3) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /simple_cpu_tb/DUT/pc(2) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /simple_cpu_tb/DUT/pc(1) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /simple_cpu_tb/DUT/pc(0) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /simple_cpu_tb/DUT/output(7) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /simple_cpu_tb/DUT/output(6) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /simple_cpu_tb/DUT/output(5) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /simple_cpu_tb/DUT/output(4) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /simple_cpu_tb/DUT/output(3) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /simple_cpu_tb/DUT/output(2) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /simple_cpu_tb/DUT/output(1) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /simple_cpu_tb/DUT/output(0) has no driver.
+# This port will contribute value (U) to the signal network.
+add wave -position insertpoint  \
+sim:/simple_cpu_tb/clk \
+sim:/simple_cpu_tb/rst_ext \
+sim:/simple_cpu_tb/instr_ext \
+sim:/simple_cpu_tb/pc_ext \
+sim:/simple_cpu_tb/input_ext \
+sim:/simple_cpu_tb/output_ext \
+sim:/simple_cpu_tb/testing
+run -all
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 0 failed with no errors.
+vsim -gui work.simple_cpu_tb
+# End time: 21:49:36 on Dec 15,2022, Elapsed time: 0:03:51
+# Errors: 0, Warnings: 14
+# vsim -gui work.simple_cpu_tb 
+# Start time: 21:49:36 on Dec 15,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.simple_cpu_tb(beh)
+# Loading work.simple_cpu(struct)
+# Loading work.dff_n(struct)
+# Loading work.ripple_carry_adder(beh)
+# ** Warning: (vsim-8683) Uninitialized out port /simple_cpu_tb/DUT/pc(3 downto 0) has no driver.
+# This port will contribute value (UUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /simple_cpu_tb/DUT/output(7 downto 0) has no driver.
+# This port will contribute value (UUUUUUUU) to the signal network.
+add wave -position insertpoint  \
+sim:/simple_cpu_tb/clk \
+sim:/simple_cpu_tb/rst_ext \
+sim:/simple_cpu_tb/instr_ext \
+sim:/simple_cpu_tb/pc_ext \
+sim:/simple_cpu_tb/input_ext \
+sim:/simple_cpu_tb/output_ext \
+sim:/simple_cpu_tb/testing
+run -all
+vsim -gui work.simple_cpu_tb
+# End time: 21:50:28 on Dec 15,2022, Elapsed time: 0:00:52
+# Errors: 0, Warnings: 3
+# vsim -gui work.simple_cpu_tb 
+# Start time: 21:50:28 on Dec 15,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.simple_cpu_tb(beh)
+# Loading work.simple_cpu(struct)
+# Loading work.dff_n(struct)
+# Loading work.ripple_carry_adder(beh)
+# ** Warning: (vsim-8683) Uninitialized out port /simple_cpu_tb/DUT/pc(3 downto 0) has no driver.
+# This port will contribute value (UUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /simple_cpu_tb/DUT/output(7 downto 0) has no driver.
+# This port will contribute value (UUUUUUUU) to the signal network.
+add wave -position insertpoint  \
+sim:/simple_cpu_tb/DUT/output
+run -all
+add wave -position insertpoint  \
+sim:/simple_cpu_tb/DUT/pc
+run -all
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-8683) Uninitialized out port /simple_cpu_tb/DUT/pc(3 downto 0) has no driver.
+# This port will contribute value (UUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /simple_cpu_tb/DUT/output(7 downto 0) has no driver.
+# This port will contribute value (UUUUUUUU) to the signal network.
+run -all
+# GetModuleFileName: Impossibile trovare il modulo specificato.
+# 
+# 
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 0 failed with no errors.
+vsim -gui work.simple_cpu_tb
+# End time: 22:01:12 on Dec 15,2022, Elapsed time: 0:10:44
+# Errors: 0, Warnings: 4
+# vsim -gui work.simple_cpu_tb 
+# Start time: 22:01:12 on Dec 15,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.simple_cpu_tb(beh)
+# Loading work.simple_cpu(struct)
+# Loading work.dff_n(struct)
+# Loading work.ripple_carry_adder(beh)
+add wave -position insertpoint  \
+sim:/simple_cpu_tb/DUT/instr \
+sim:/simple_cpu_tb/DUT/pc \
+sim:/simple_cpu_tb/DUT/input \
+sim:/simple_cpu_tb/DUT/output
+run -all
+add wave -position insertpoint  \
+sim:/simple_cpu_tb/DUT/clk \
+sim:/simple_cpu_tb/DUT/rst \
+sim:/simple_cpu_tb/DUT/R0_in \
+sim:/simple_cpu_tb/DUT/R0_out \
+sim:/simple_cpu_tb/DUT/SR_in \
+sim:/simple_cpu_tb/DUT/SR_out
+restart -f
+run -all
+# GetModuleFileName: Impossibile trovare il modulo specificato.
+# 
+# 
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 0 failed with no errors.
+vsim -gui work.simple_cpu_tb
+# End time: 22:06:39 on Dec 15,2022, Elapsed time: 0:05:27
+# Errors: 0, Warnings: 2
+# vsim -gui work.simple_cpu_tb 
+# Start time: 22:06:39 on Dec 15,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.simple_cpu_tb(beh)
+# Loading work.simple_cpu(struct)
+# Loading work.dff_n(struct)
+# Loading work.ripple_carry_adder(beh)
+add wave -position insertpoint  \
+sim:/simple_cpu_tb/DUT/rst \
+sim:/simple_cpu_tb/DUT/instr \
+sim:/simple_cpu_tb/DUT/pc \
+sim:/simple_cpu_tb/DUT/input \
+sim:/simple_cpu_tb/DUT/output \
+sim:/simple_cpu_tb/DUT/R0_in \
+sim:/simple_cpu_tb/DUT/R0_out \
+sim:/simple_cpu_tb/DUT/SR_in \
+sim:/simple_cpu_tb/DUT/SR_out
+run -all
+add wave -position insertpoint  \
+sim:/simple_cpu_tb/DUT/clk \
+sim:/simple_cpu_tb/DUT/rst
+# Load canceled
+restart -f
+run -all
+# GetModuleFileName: Impossibile trovare il modulo specificato.
+# 
+# 
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 0 failed with no errors.
+vsim -gui work.simple_cpu_tb
+# End time: 22:14:34 on Dec 15,2022, Elapsed time: 0:07:55
+# Errors: 0, Warnings: 2
+# vsim -gui work.simple_cpu_tb 
+# Start time: 22:14:34 on Dec 15,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.simple_cpu_tb(beh)
+# Loading work.simple_cpu(struct)
+# Loading work.dff_n(struct)
+# Loading work.ripple_carry_adder(beh)
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 4 (3 downto 0). Right is 8 (7 downto 0).
+#    Time: 0 ps  Iteration: 0  Process: /simple_cpu_tb/DUT/simple_cpu_process File: C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/simple_cpu.vhdl
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 22:14:34 on Dec 15,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 0 failed with no errors.
+vsim -gui work.simple_cpu_tb
+# vsim -gui work.simple_cpu_tb 
+# Start time: 22:15:29 on Dec 15,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.simple_cpu_tb(beh)
+# Loading work.simple_cpu(struct)
+# Loading work.dff_n(struct)
+# ** Fatal: (vsim-3348) Port length (8) does not match actual length (4) for port "/simple_cpu_tb/DUT/PC1/d".
+#    Time: 0 ps  Iteration: 0  Instance: /simple_cpu_tb/DUT/PC1 File: C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/DFF_N.vhd Line: 12
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 22:15:30 on Dec 15,2022, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 2
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 0 failed with no errors.
+vsim -gui work.simple_cpu_tb
+# vsim -gui work.simple_cpu_tb 
+# Start time: 22:17:02 on Dec 15,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.simple_cpu_tb(beh)
+# Loading work.simple_cpu(struct)
+# Loading work.dff_n(struct)
+# Loading work.ripple_carry_adder(beh)
+add wave -position insertpoint  \
+sim:/simple_cpu_tb/DUT/clk \
+sim:/simple_cpu_tb/DUT/rst \
+sim:/simple_cpu_tb/DUT/instr \
+sim:/simple_cpu_tb/DUT/pc \
+sim:/simple_cpu_tb/DUT/input \
+sim:/simple_cpu_tb/DUT/output \
+sim:/simple_cpu_tb/DUT/R0_in \
+sim:/simple_cpu_tb/DUT/R0_out \
+sim:/simple_cpu_tb/DUT/SR_in \
+sim:/simple_cpu_tb/DUT/SR_out
+run -all
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 0 failed with no errors.
+vsim -gui work.simple_cpu_tb
+# End time: 22:20:27 on Dec 15,2022, Elapsed time: 0:03:25
+# Errors: 0, Warnings: 3
+# vsim -gui work.simple_cpu_tb 
+# Start time: 22:20:27 on Dec 15,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.simple_cpu_tb(beh)
+# Loading work.simple_cpu(struct)
+# Loading work.dff_n(struct)
+# Loading work.ripple_carry_adder(beh)
+add wave -position insertpoint  \
+sim:/simple_cpu_tb/DUT/clk \
+sim:/simple_cpu_tb/DUT/rst \
+sim:/simple_cpu_tb/DUT/instr \
+sim:/simple_cpu_tb/DUT/pc \
+sim:/simple_cpu_tb/DUT/input \
+sim:/simple_cpu_tb/DUT/output \
+sim:/simple_cpu_tb/DUT/R0_in \
+sim:/simple_cpu_tb/DUT/R0_out
+run -all
+add wave -position insertpoint  \
+sim:/simple_cpu_tb/DUT/PC_in \
+sim:/simple_cpu_tb/DUT/PC_out \
+sim:/simple_cpu_tb/DUT/REG_OUT_in \
+sim:/simple_cpu_tb/DUT/REG_OUT_out
+restart -f
+run -all
+# GetModuleFileName: Impossibile trovare il modulo specificato.
+# 
+# 
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 0 failed with no errors.
+vsim -gui work.simple_cpu_tb
+# End time: 22:24:56 on Dec 15,2022, Elapsed time: 0:04:29
+# Errors: 0, Warnings: 2
+# vsim -gui work.simple_cpu_tb 
+# Start time: 22:24:56 on Dec 15,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.simple_cpu_tb(beh)
+# Loading work.simple_cpu(struct)
+# Loading work.dff_n(struct)
+# Loading work.ripple_carry_adder(beh)
+add wave -position insertpoint  \
+sim:/simple_cpu_tb/DUT/clk \
+sim:/simple_cpu_tb/DUT/rst \
+sim:/simple_cpu_tb/DUT/instr \
+sim:/simple_cpu_tb/DUT/pc \
+sim:/simple_cpu_tb/DUT/input \
+sim:/simple_cpu_tb/DUT/output \
+sim:/simple_cpu_tb/DUT/R0_in \
+sim:/simple_cpu_tb/DUT/R0_out \
+sim:/simple_cpu_tb/DUT/PC_in \
+sim:/simple_cpu_tb/DUT/PC_out \
+sim:/simple_cpu_tb/DUT/REG_OUT_in \
+sim:/simple_cpu_tb/DUT/REG_OUT_out
+run -all
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl failed with 26 errors.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 1 failed with 26 errors.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl failed with 4 errors.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 1 failed with 4 errors.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl failed with 3 errors.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 1 failed with 3 errors.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl failed with 2 errors.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 1 failed with 2 errors.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 0 failed with no errors.
+vsim -gui work.simple_cpu_tb
+# End time: 22:39:31 on Dec 15,2022, Elapsed time: 0:14:35
+# Errors: 0, Warnings: 6
+# vsim -gui work.simple_cpu_tb 
+# Start time: 22:39:31 on Dec 15,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.simple_cpu_tb(beh)
+# Loading work.simple_cpu(struct)
+# Loading work.dff_n(struct)
+# Loading work.rom(struct)
+# Loading work.ripple_carry_adder(beh)
+add wave -position insertpoint  \
+sim:/simple_cpu_tb/DUT/clk \
+sim:/simple_cpu_tb/DUT/rst \
+sim:/simple_cpu_tb/DUT/instr \
+sim:/simple_cpu_tb/DUT/pc \
+sim:/simple_cpu_tb/DUT/input \
+sim:/simple_cpu_tb/DUT/output \
+sim:/simple_cpu_tb/DUT/R0_in \
+sim:/simple_cpu_tb/DUT/R0_out \
+sim:/simple_cpu_tb/DUT/PC_in \
+sim:/simple_cpu_tb/DUT/PC_out \
+sim:/simple_cpu_tb/DUT/REG_OUT_in \
+sim:/simple_cpu_tb/DUT/REG_OUT_out
+run -all
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /simple_cpu_tb/DUT/ROM_comp
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 8 (7 downto 0). Right is 6 (5 downto 0).
+#    Time: 0 ps  Iteration: 0  Process: /simple_cpu_tb/DUT/ROM_comp/line__37 File: C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/rom.vhdl
+# Fatal error in Architecture struct at C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/rom.vhdl line 37
+# 
+# HDL call sequence:
+# Stopped at C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/simple_cpu.vhdl 261 Process simple_cpu_process
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/rom.vhdl 37 Architecture struct
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/rom.vhdl 37 Architecture struct
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/Giovanni/Documents/GitHub/Electronics-and-Communications-Systems/src/rom.vhdl 37 Architecture struct
+# 
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 0 failed with no errors.
+vsim -gui work.simple_cpu_tb
+# End time: 22:43:58 on Dec 15,2022, Elapsed time: 0:04:27
+# Errors: 0, Warnings: 2
+# vsim -gui work.simple_cpu_tb 
+# Start time: 22:43:58 on Dec 15,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.simple_cpu_tb(beh)
+# Loading work.simple_cpu(struct)
+# Loading work.dff_n(struct)
+# Loading work.rom(struct)
+# Loading work.ripple_carry_adder(beh)
+add wave -position insertpoint  \
+sim:/simple_cpu_tb/DUT/clk \
+sim:/simple_cpu_tb/DUT/rst \
+sim:/simple_cpu_tb/DUT/instr \
+sim:/simple_cpu_tb/DUT/pc \
+sim:/simple_cpu_tb/DUT/input \
+sim:/simple_cpu_tb/DUT/output \
+sim:/simple_cpu_tb/DUT/R0_in \
+sim:/simple_cpu_tb/DUT/R0_out \
+sim:/simple_cpu_tb/DUT/PC_in \
+sim:/simple_cpu_tb/DUT/PC_out \
+sim:/simple_cpu_tb/DUT/REG_OUT_in \
+sim:/simple_cpu_tb/DUT/REG_OUT_out
+run -all
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /simple_cpu_tb/DUT/ROM_comp
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 350 ns  Iteration: 1  Instance: /simple_cpu_tb/DUT/ROM_comp
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 450 ns  Iteration: 1  Instance: /simple_cpu_tb/DUT/ROM_comp
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 650 ns  Iteration: 1  Instance: /simple_cpu_tb/DUT/ROM_comp
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 750 ns  Iteration: 1  Instance: /simple_cpu_tb/DUT/ROM_comp
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 850 ns  Iteration: 1  Instance: /simple_cpu_tb/DUT/ROM_comp
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 950 ns  Iteration: 1  Instance: /simple_cpu_tb/DUT/ROM_comp
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1050 ns  Iteration: 1  Instance: /simple_cpu_tb/DUT/ROM_comp
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1150 ns  Iteration: 1  Instance: /simple_cpu_tb/DUT/ROM_comp
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1250 ns  Iteration: 1  Instance: /simple_cpu_tb/DUT/ROM_comp
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1350 ns  Iteration: 1  Instance: /simple_cpu_tb/DUT/ROM_comp
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1450 ns  Iteration: 1  Instance: /simple_cpu_tb/DUT/ROM_comp
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1550 ns  Iteration: 1  Instance: /simple_cpu_tb/DUT/ROM_comp
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1650 ns  Iteration: 1  Instance: /simple_cpu_tb/DUT/ROM_comp
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1750 ns  Iteration: 1  Instance: /simple_cpu_tb/DUT/ROM_comp
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 1950 ns  Iteration: 1  Instance: /simple_cpu_tb/DUT/ROM_comp
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2050 ns  Iteration: 1  Instance: /simple_cpu_tb/DUT/ROM_comp
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2250 ns  Iteration: 1  Instance: /simple_cpu_tb/DUT/ROM_comp
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2350 ns  Iteration: 1  Instance: /simple_cpu_tb/DUT/ROM_comp
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2450 ns  Iteration: 1  Instance: /simple_cpu_tb/DUT/ROM_comp
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2550 ns  Iteration: 1  Instance: /simple_cpu_tb/DUT/ROM_comp
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2650 ns  Iteration: 1  Instance: /simple_cpu_tb/DUT/ROM_comp
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 2750 ns  Iteration: 1  Instance: /simple_cpu_tb/DUT/ROM_comp
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl failed with 34 errors.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 1 failed with 34 errors.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl failed with 39 errors.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 1 failed with 39 errors.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl failed with 18 errors.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 1 failed with 18 errors.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl failed with 17 errors.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 1 failed with 17 errors.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl failed with 17 errors.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 1 failed with 17 errors.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl failed with 1 errors.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 1 failed with 1 error.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl failed with 3 errors.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 1 failed with 3 errors.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl failed with 1 errors.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 1 failed with 1 error.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl failed with 1 errors.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 1 failed with 1 error.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl was successful.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 0 failed with no errors.
+vsim -gui work.simple_cpu_tb
+# End time: 23:04:34 on Dec 15,2022, Elapsed time: 0:20:36
+# Errors: 0, Warnings: 34
+# vsim -gui work.simple_cpu_tb 
+# Start time: 23:04:34 on Dec 15,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.simple_cpu_tb(beh)
+# Loading work.simple_cpu(struct)
+# Loading work.dff_n(struct)
+# Loading ieee.std_logic_arith(body)
+# Loading work.rom(struct)
+# Loading work.ripple_carry_adder(beh)
+add wave -position insertpoint  \
+sim:/simple_cpu_tb/DUT/clk \
+sim:/simple_cpu_tb/DUT/rst \
+sim:/simple_cpu_tb/DUT/instr \
+sim:/simple_cpu_tb/DUT/pc \
+sim:/simple_cpu_tb/DUT/input \
+sim:/simple_cpu_tb/DUT/output \
+sim:/simple_cpu_tb/DUT/R0_in \
+sim:/simple_cpu_tb/DUT/R0_out \
+sim:/simple_cpu_tb/DUT/PC_in \
+sim:/simple_cpu_tb/DUT/PC_out \
+sim:/simple_cpu_tb/DUT/REG_OUT_in \
+sim:/simple_cpu_tb/DUT/REG_OUT_out
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /simple_cpu_tb/DUT/ROM_comp
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /simple_cpu_tb/DUT/ROM_comp
+add wave -position insertpoint  \
+sim:/simple_cpu_tb/DUT/ROM_comp/pc \
+sim:/simple_cpu_tb/DUT/ROM_comp/instr \
+sim:/simple_cpu_tb/DUT/ROM_comp/R
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# GetModuleFileName: Impossibile trovare il modulo specificato.
+# 
+# 
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /simple_cpu_tb/DUT/ROM_comp
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /simple_cpu_tb/DUT/ROM_comp
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl failed with 1 errors.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 1 failed with 1 error.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl failed with 1 errors.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 1 failed with 1 error.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl failed with 1 errors.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 1 failed with 1 error.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl failed with 1 errors.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 1 failed with 1 error.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl failed with 1 errors.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 1 failed with 1 error.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl failed with 1 errors.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 1 failed with 1 error.
+# Compile of counter.vhd was successful.
+# Compile of DFF_N.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of half_adder.vhd was successful.
+# Compile of ripple_carry_adder.vhd was successful.
+# Compile of rom.vhdl was successful.
+# Compile of simple_cpu.vhdl failed with 1 errors.
+# Compile of simple_cpu_tb.vhdl was successful.
+# 8 compiles, 1 failed with 1 error.
+# End time: 23:26:05 on Dec 15,2022, Elapsed time: 0:21:31
+# Errors: 0, Warnings: 10
